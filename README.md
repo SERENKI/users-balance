@@ -84,18 +84,16 @@ php artisan queue:work
 ```
 redis-server
 ```
-
-# Собрать ассеты для production
-```
-npm run build
-```
-
-# Запустить разработческий сервер
-```
-npm run dev
-```
-
 # Установить зависимости
 ```
 npm install
+```
+
+# Собрать фронтенд
+```
+npm run build
+```
+или запустить для разработки:
+```
+npm run dev
 ```
