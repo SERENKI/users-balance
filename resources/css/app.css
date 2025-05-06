@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -8,4 +9,178 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+  --primary: #3490dc;
+  --danger: #dc3545;
+  --body-bg: #f8f9fa;
+}
+
+body {
+  padding-top: 1rem;
+  background-color: var(--body-bg);
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 0.3rem;
+    align-items: self-start;
+    width: 100%;
+}
+
+.navbar-menu .nav-item {
+    margin-left: 1rem;
+}
+
+.navbar-menu .nav-item a {
+    color: var(--bs-white);
+    text-decoration: none;
+}
+
+.navbar-menu .nav-item a:hover {
+    text-decoration: underline;
+}
+
+.navbar-menu .nav-item a.active {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu .nav-item a.active:hover {
+    text-decoration: none;
+}
+
+.auth-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.home-view {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.balance-card {
+    background-color: #f8f9fa;
+}
+
+.balance-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.transaction-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.transaction-item {
+    transition: transform 0.2s;
+}
+
+.transaction-item:hover {
+    transform: translateX(5px);
+}
+
+.badge {
+    font-size: 0.85em;
+    padding: 0.35em 0.65em;
+}
+
+.bg-success-light {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-color: rgba(40, 167, 69, 0.2) !important;
+}
+
+.bg-danger-light {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-color: rgba(220, 53, 69, 0.2) !important;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.page-link {
+    color: var(--bs-primary);
+}
+
+.page-link:hover {
+    color: #0a58ca;
+}
+
+.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
